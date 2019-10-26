@@ -17,7 +17,7 @@ export default class AddItemsScreen extends React.Component {
     super(props);
     var config = {
        apiKey: "AIzaSyBu7u1NXsPTLkjEV4NGRtxGqLt9BcgiQt0",
-       authDomain: "react-native-crud-firebase.firebaseapp.com",
+       authDomain: "react-native-crud-firebasedb.firebaseapp.com",
        databaseURL: "https://react-native-crud-firebasedb.firebaseio.com",
        projectId: "react-native-crud-firebase",
        storageBucket: "react-native-crud-firebase.appspot.com",
@@ -37,24 +37,19 @@ export default class AddItemsScreen extends React.Component {
   }
 
   handleSubmit = () => {
-    // this.validate({
-    //     firstname: {minlength:3, maxlength:7, required: true},
-    //     lastname: {minlength:3, maxlength:7, required: true},
-    //     classn: {maxlength:1, numbers: true,  required: true},
-    //     grade: {maxlength:1, required: true},
-    //   });
+    
       if(this.state.firstname == "" || this.state.lastname == "" ||
             this.state.classn == "" || this.state.grade == ""){
         Alert.alert(
-        'Please fill all items'
+        'Preencha todos os campos'
         );
         return false;
       }
-      //number validation
-      var regex = /^[0-9\b]+$/;    // allow only numbers [0-9]
+      
+      var regex = /^[0-9\b]+$/; 
         if( !regex.test(this.state.classn) ){
           Alert.alert(
-          'Please enter a number for class'
+          'Inform um numero para a turma'
           );
           return false;
         }
@@ -63,7 +58,7 @@ export default class AddItemsScreen extends React.Component {
              this.state.classn,
              this.state.grade);
              Alert.alert(
-             'Item saved successfully'
+             'Item salvo com sucesso!'
            );
 
   }

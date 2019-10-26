@@ -19,9 +19,9 @@ import AddItemsScreen from './screens/AddItemsScreen';
 import ListItemsScreen from './screens/ListItemsScreen';
 
 export default createMaterialTopTabNavigator ({
-  Home: HomeScreen,
-  AddItems: AddItemsScreen,
-  ListItems: ListItemsScreen,
+  Inicio: HomeScreen,
+  Adicionar: AddItemsScreen,
+  Listar: ListItemsScreen,
 });
 
 const styles = StyleSheet.create({

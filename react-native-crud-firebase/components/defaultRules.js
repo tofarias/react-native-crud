@@ -2,7 +2,7 @@
 
 import moment from 'moment';
 
-// Custom default rules to validate form fields
+// Regras de validacao
 const defaultRules = {
   numbers: /^(([0-9]*)|(([0-9]*)\.([0-9]*)))$/,
   email: /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/,
